@@ -2,6 +2,14 @@ import joblib
 import numpy as np
 import re
 import nltk
+nltk_resources = ['stopwords', 'wordnet']
+
+for resource in nltk_resources:
+    try:
+        nltk.data.find(f'corpora/{resource}')
+    except LookupError:
+        nltk.download(resource)
+
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
