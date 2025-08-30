@@ -4,7 +4,6 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import warnings
 
 class RestaurantReviewPredictor:
     def __init__(self, model_path='restaurant_review_classifier.joblib'):
